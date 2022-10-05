@@ -8,6 +8,7 @@ import { CourseInfoComponent } from './course-info/course-info.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ContactsInfoComponent } from './contacts-info/contacts-info.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactsInfoComponent } from './contacts-info/contacts-info.component';
     ContactsInfoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
