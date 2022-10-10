@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseInfoComponent implements OnInit {
 
+  course_coded="BSCS"
+  course_DES="coubuter sines"
+  Title="couse iformation"
+courseImg="../../../assets/imges/bscs1.jpg"
+
   constructor() { }
 
   ngOnInit(): void {
