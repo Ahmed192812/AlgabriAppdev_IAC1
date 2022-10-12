@@ -3,42 +3,22 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col"> course title</th>
+            <th scope="col">courso Code</th>
+            <th scope="col">program </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let course of  CourseList">
+            <th scope="row"><a [title]="course.cCode">
+              {{course.cDesc}}
+            </a></th>
+            <td>{{course.cDesc}}</td>
+            <td>{{course.program}}</td>
+
+           
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
+         
         </tbody>
       </table>
 </div>
