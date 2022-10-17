@@ -7,10 +7,11 @@ import { COURSE } from '../samp-course';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
-
-  
-  @Input() courses: course []=[];
-  
+ coursess = COURSE ;
+ 
+  @Input() courses?: course 
+  title = "course info"
+  motitle = "Details"
   constructor() { }
 
   ngOnInit(): void {

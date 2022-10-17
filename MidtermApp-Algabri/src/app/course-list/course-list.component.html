@@ -2,23 +2,81 @@
     <table class="table table-light table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col"> course title</th>
             <th scope="col">courso Code</th>
             <th scope="col">program </th>
+            <th scope="col">Actions</th>
+
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let course of  CourseList">
-            <th scope="row"><a [title]="course.cCode">
+          <tr *ngFor="let course of  coursess">
+            <th scope="row">
+              <a href="#" [title]="course.cCode">
               {{course.cDesc}}
-            </a></th>
-            <td>{{course.cDesc}}</td>
+            </a>
+          </th>
+            <td>{{course.cCode}}</td>
             <td>{{course.program}}</td>
-
-           
+            <td>
+              <button type="button" class="btn mr-2 btn-primary" [class.selected]="course === selectedCourse" (click)="onSelect(course)">
+                info
+              </button>
+              <button type="button" class="btn btn-danger" >
+                Delet
+              </button>
+            </td>
           </tr>
          
         </tbody>
       </table>
+      <div *ngFor="coursess">
+        <form action="" >
+          <div class="form-group mt-2">
+              <fieldset>
+                <label class="form-label mt-4" for="readOnlyInput">course code</label>
+                <input class="form-control" id="courseCode" type="text" placeholder="course code" >
+              </fieldset>
+            </div>
+            <div class="form-group mt-1">
+              <fieldset>
+                <label class="form-label mt-4" for="course description">course description</label>
+                <input class="form-control" id="course description" type="text" placeholder="course description" >
+              </fieldset>
+            </div>
+            <div class="form-group mt-1">
+              <label for="exampleSelect1" class="form-label mt-4">course type</label>
+              <select class="form-select" id="exampleSelect1">
+                <option>lecture</option>
+                <option>laboratory</option>
+                <option>lrcture and lab</option>
+              </select>
+            </div>
+          
+            <div class="form-group mt-1">
+              <fieldset>
+                <label class="form-label mt-4" for="readOnlyInput">course code</label>
+                <input class="form-control" id="courseCode" type="text" placeholder="course code" >
+              </fieldset>
+            </div>
+            <div class="form-group mt-1">
+              <fieldset>
+                <label class="form-label mt-4" for="Number of Units">Number of Units</label>
+                <input class="form-control" id="courseCode" type="number" placeholder="Number of Units" >
+              </fieldset>
+            </div>
+            <div class="form-group mt-1">
+              <fieldset>
+                <label class="form-label mt-4" for="readOnlyInput">Co-requisite</label>
+                <input class="form-control" id="courseCode" type="text" placeholder="Co-requisite" >
+              </fieldset>
+            </div>
+            
+      </form>
+      </div>
 </div>
+
+     
+ 
+
+<!-- <app-course-info [course]="selectedCourse"></app-course-info> -->
