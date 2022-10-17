@@ -13,7 +13,11 @@ export class CourseListComponent implements OnInit {
   title = "course info"
   motitle = "Details"
   constructor() { }
+ selectedCourse?:course;
+ onSelect(course:course):void{
+  this.selectedCourse = course;
 
+ }
   ngOnInit(): void {
   }
 }
