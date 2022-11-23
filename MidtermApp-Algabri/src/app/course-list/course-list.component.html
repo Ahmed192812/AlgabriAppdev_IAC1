@@ -10,7 +10,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let course of  coursess">
+          <tr *ngFor="let course of coursess">
             <th scope="row">
               <a href="#" [title]="course.cCode">
               {{course.cDesc}}
@@ -30,7 +30,8 @@
          
         </tbody>
       </table>
-      <div *ngFor="coursess">
+
+      <div *ngFor="coursess" #course>
         <form action="" >
           <div class="form-group mt-2">
               <fieldset>
